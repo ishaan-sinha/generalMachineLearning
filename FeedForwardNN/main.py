@@ -54,6 +54,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr = learning_rate)
 
 #training loop
 n_total_steps = len(train_loader)
+
 for epoch in range(num_epochs):
     for i, (images, labels) in enumerate(train_loader):
         images = images.reshape(-1, 28*28).to(device)
